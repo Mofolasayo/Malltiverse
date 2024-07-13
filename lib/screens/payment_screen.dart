@@ -93,30 +93,3 @@ class PaymentScreen extends StatelessWidget {
     );
   }
 }
-/*const Text('Card Number'),
-          //TextFormField,
-          //Textform(label: '0000 0000 0000 0000'),
-          const Row(
-            children: [
-              Column(
-                children: [
-                  Text("Expiry Date"),
-                  //TextFORM FIELD
-                  Textform(label: 'MM/YY')
-                ],
-              ),
-              Column(
-                children: [
-                  Text("CVV"),
-                  //TextFORM FIELD
-                  Textform(label: '123')
-                ],
-              )
-            ],
-          ),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const Successful()));
-              },
-              child: const Text("Make Payment"))*/
