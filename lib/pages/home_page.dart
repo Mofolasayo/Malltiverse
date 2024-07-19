@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
 import 'package:malltiverse/constants/constants.dart';
 import 'package:malltiverse/constants/svgIcons.dart';
-
 import 'package:malltiverse/models/product_model.dart';
 import 'package:malltiverse/screens/cart_screen.dart';
 import 'package:malltiverse/screens/checkout_screen.dart';
-
 import 'package:malltiverse/screens/home_screen.dart';
 import 'package:malltiverse/services/product_service.dart';
 
@@ -85,7 +82,7 @@ class _HomePageState extends State<HomePage> {
           borderRadius: BorderRadius.circular(20),
           child: BottomNavigationBar(
             backgroundColor: const Color.fromRGBO(42, 42, 42, 1),
-            selectedItemColor: primary,
+            // selectedItemColor: primary,
             currentIndex: currentIndex,
             onTap: onTappedBar,
             items: [

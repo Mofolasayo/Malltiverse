@@ -17,7 +17,7 @@ class ProductService {
   Future<Product> getProduct() async {
     final response = await http.get(Uri.parse(
         '$BASE_URL?organization_id=$organizationId&Appid=$appId&Apikey=$apiKey'));
-    print('response: ${response.body}');
+    //print('response: ${response.body}');
     if (response.statusCode == 200) {
       return Product.fromJson(jsonDecode(response.body));
     } else {

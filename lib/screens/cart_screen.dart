@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 
 import 'package:malltiverse/constants/constants.dart';
 import 'package:malltiverse/constants/svgIcons.dart';
+import 'package:malltiverse/screens/checkout_screen.dart';
 import 'package:malltiverse/utils/cartItems.dart';
 import 'package:malltiverse/utils/separator.dart';
 import 'package:provider/provider.dart';
@@ -195,7 +196,12 @@ class CartScreen extends StatelessWidget {
                               ),
                               Center(
                                 child: ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                CheckoutScreen()));
+                                  },
                                   style: ElevatedButton.styleFrom(
                                       backgroundColor: primary),
                                   child: const Padding(
