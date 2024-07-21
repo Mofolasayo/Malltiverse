@@ -1,12 +1,15 @@
 # Malltiverse
+The Flutter project is a mobile application that includes a user-friendly checkout and payment system. 
 
-The shopping application developed with Flutter provides users with a seamless shopping experience. Users can explore a wide range of products, add items to their cart, and 
+Users can input their payment details, validate the information, and proceed to a success screen upon successful payment. The app also offers flexible checkout options for delivery or pickup, along with a feature for providing contact details. 
 
-effortlessly proceed to checkout. The app is equipped with a user-friendly bottom navigation bar, making it simple for users to switch between various screens and product categories. 
+Built with Flutter, 
+the shopping application provides a seamless user experience with a wide range of products, easy cart management, streamlined checkout process, state management using Provider, and 
+local storage using Hive. 
 
-Additionally, the scrollable grid view coupled with dots indicators allows for easy browsing of products. Moreover, the app incorporates a robust cart system that ensures a smooth and 
+It incorporates a well-designed bottom navigation bar for easy screen and category navigation, as well as a scrollable grid view with dot indicators for 
+intuitive product exploration. Additionally, the app includes a robust cart system to enhance the overall shopping experience.
 
-efficient shopping process for the users.
 ## Features
 - **Home Screen**: Displays product categories and featured products.
  
@@ -19,7 +22,13 @@ efficient shopping process for the users.
 - **Checkout Screen**: Allows users to proceed with their purchase.
   
 - **Radio Buttons**: Provides options for user selections in various forms.
-
+  
+- **Form Validation**:  Ensures that the user enters valid card details.
+  
+- **State Management**: Uses Provider for managing the cart state.
+  
+- **Local Sorage**:  Uses Hive for persisting data locally
+  
 ## Getting Started
 
 Installation
@@ -35,9 +44,9 @@ Install dependencies:
 Run the app:
 ```flutter run```
 
-Appetizo: https://appetize.io/embed/b_nqvg4lis75w4od6fswv73b72de
+Appetizo: https://appetize.io/app/b_qbb2cvgmwbxqzecgbk52dpi4ia
 
-Apk: https://drive.google.com/file/d/18havEA6hj-Ty5xtiPFpQHxzPEIinQL_m/view?usp=sharing
+Apk: https://drive.google.com/file/d/16d1BBJtZZDCKV7y6oKVZpps-P3elXkDN/view?usp=sharing
 
 
 ## Api Integration
@@ -74,5 +83,8 @@ class ProductService {
 
 <img width="426" alt="Screenshot 2024-07-13 at 22 55 32" src="https://github.com/user-attachments/assets/33e019af-c98d-455a-bf49-0b49dba1bc1c">
 
-https://github.com/user-attachments/assets/dd7253db-94e0-4023-b23a-4ae1ade6f714
+[Screen Recording 2024-07-21 at 14.41.54.zip](https://github.com/user-attachments/files/16324681/Screen.Recording.2024-07-21.at.14.41.54.zip)
+
+
+
 
