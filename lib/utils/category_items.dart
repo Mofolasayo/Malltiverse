@@ -42,7 +42,6 @@ class _CategoryItemsState extends State<CategoryItems> {
                   child: Text('No items found for this category'));
             }
 
-            // Calculate the number of pages required to display two items per page
             final int pageCount = (categoryItems.length / 2).ceil();
 
             return Column(

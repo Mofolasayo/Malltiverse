@@ -85,13 +85,19 @@ androidx.annotation.ColorInt
 androidx.annotation.ColorLong
 androidx.annotation.ColorRes
 androidx.annotation.ContentView
+androidx.annotation.DeprecatedSinceApi
 androidx.annotation.DimenRes
+androidx.annotation.Dimension$Companion
 androidx.annotation.Dimension
+androidx.annotation.Discouraged
+androidx.annotation.DisplayContext
 androidx.annotation.DoNotInline
 androidx.annotation.DrawableRes
+androidx.annotation.EmptySuper
 androidx.annotation.FloatRange
 androidx.annotation.FontRes
 androidx.annotation.FractionRes
+androidx.annotation.GravityInt
 androidx.annotation.GuardedBy
 androidx.annotation.HalfFloat
 androidx.annotation.IdRes
@@ -109,12 +115,17 @@ androidx.annotation.MainThread
 androidx.annotation.MenuRes
 androidx.annotation.NavigationRes
 androidx.annotation.NonNull
+androidx.annotation.NonUiContext
 androidx.annotation.Nullable
+androidx.annotation.OpenForTesting
 androidx.annotation.OptIn
 androidx.annotation.PluralsRes
 androidx.annotation.Px
 androidx.annotation.RawRes
+androidx.annotation.ReplaceWith
 androidx.annotation.RequiresApi
+androidx.annotation.RequiresExtension$Container
+androidx.annotation.RequiresExtension
 androidx.annotation.RequiresFeature
 androidx.annotation.RequiresOptIn$Level
 androidx.annotation.RequiresOptIn
@@ -123,13 +134,16 @@ androidx.annotation.RequiresPermission$Write
 androidx.annotation.RequiresPermission
 androidx.annotation.RestrictTo$Scope
 androidx.annotation.RestrictTo
+androidx.annotation.ReturnThis
 androidx.annotation.Size
 androidx.annotation.StringDef
 androidx.annotation.StringRes
 androidx.annotation.StyleRes
 androidx.annotation.StyleableRes
 androidx.annotation.TransitionRes
+androidx.annotation.UiContext
 androidx.annotation.UiThread
+androidx.annotation.VisibleForTesting$Companion
 androidx.annotation.VisibleForTesting
 androidx.annotation.WorkerThread
 androidx.annotation.XmlRes
@@ -1635,6 +1649,101 @@ com.example.malltiverse.R$string
 com.example.malltiverse.R$style
 com.example.malltiverse.R$styleable
 com.example.malltiverse.R
+com.tekartik.sqflite.BuildConfig
+com.tekartik.sqflite.Constant:
+    static final java.lang.String CMD_GET
+    static final java.lang.String ERROR_BAD_PARAM
+    static final java.lang.String ERROR_DATABASE_CLOSED
+    static final java.lang.String ERROR_OPEN_FAILED
+    static final java.lang.String MEMORY_DATABASE_PATH
+    public static final java.lang.String METHOD_ANDROID_SET_LOCALE
+    public static final java.lang.String METHOD_BATCH
+    public static final java.lang.String METHOD_CLOSE_DATABASE
+    public static final java.lang.String METHOD_DATABASE_EXISTS
+    public static final java.lang.String METHOD_DEBUG
+    public static final java.lang.String METHOD_DEBUG_MODE
+    public static final java.lang.String METHOD_DELETE_DATABASE
+    public static final java.lang.String METHOD_EXECUTE
+    public static final java.lang.String METHOD_GET_DATABASES_PATH
+    public static final java.lang.String METHOD_GET_PLATFORM_VERSION
+    public static final java.lang.String METHOD_INSERT
+    public static final java.lang.String METHOD_OPEN_DATABASE
+    public static final java.lang.String METHOD_OPTIONS
+    public static final java.lang.String METHOD_QUERY
+    public static final java.lang.String METHOD_QUERY_CURSOR_NEXT
+    public static final java.lang.String METHOD_UPDATE
+    public static final java.lang.String PARAM_CANCEL
+    static final java.lang.String PARAM_CMD
+    public static final java.lang.String PARAM_COLUMNS
+    public static final java.lang.String PARAM_CONTINUE_OR_ERROR
+    public static final java.lang.String PARAM_CURSOR_ID
+    public static final java.lang.String PARAM_CURSOR_PAGE_SIZE
+    public static final java.lang.String PARAM_ERROR
+    public static final java.lang.String PARAM_ERROR_CODE
+    public static final java.lang.String PARAM_ERROR_DATA
+    public static final java.lang.String PARAM_ERROR_MESSAGE
+    static final java.lang.String PARAM_ID
+    public static final java.lang.String PARAM_IN_TRANSACTION_CHANGE
+    static final java.lang.String PARAM_LOCALE
+    static final java.lang.String PARAM_LOG_LEVEL
+    public static final java.lang.String PARAM_METHOD
+    public static final java.lang.String PARAM_NO_RESULT
+    static final java.lang.String PARAM_OPERATIONS
+    static final java.lang.String PARAM_PATH
+    static final java.lang.String PARAM_READ_ONLY
+    public static final java.lang.String PARAM_RECOVERED
+    public static final java.lang.String PARAM_RECOVERED_IN_TRANSACTION
+    public static final java.lang.String PARAM_RESULT
+    public static final java.lang.String PARAM_ROWS
+    static final java.lang.String PARAM_SINGLE_INSTANCE
+    public static final java.lang.String PARAM_SQL
+    public static final java.lang.String PARAM_SQL_ARGUMENTS
+    static final java.lang.String PARAM_THREAD_COUNT
+    static final java.lang.String PARAM_THREAD_PRIORITY
+    public static final java.lang.String PARAM_TRANSACTION_ID
+    public static final java.lang.String PLUGIN_KEY
+    static final java.lang.String SQLITE_ERROR
+    public static final java.lang.String TAG
+    public static final int TRANSACTION_ID_FORCE
+    public void <init>()
+com.tekartik.sqflite.Database:
+    static final boolean WAL_ENABLED_BY_DEFAULT
+    private static final java.lang.String WAL_ENABLED_META_NAME
+    public boolean enableWriteAheadLogging()
+com.tekartik.sqflite.LocaleUtils
+com.tekartik.sqflite.LogLevel:
+    static final int none
+    static final int sql
+    static final int verbose
+    public void <init>()
+com.tekartik.sqflite.R$attr
+com.tekartik.sqflite.R$color
+com.tekartik.sqflite.R$dimen
+com.tekartik.sqflite.R$drawable
+com.tekartik.sqflite.R$id
+com.tekartik.sqflite.R$integer
+com.tekartik.sqflite.R$layout
+com.tekartik.sqflite.R$string
+com.tekartik.sqflite.R$style
+com.tekartik.sqflite.R$styleable
+com.tekartik.sqflite.R
+com.tekartik.sqflite.SqflitePlugin:
+    public void <init>(android.content.Context)
+    private static java.util.Map fixMap(java.util.Map)
+    private android.content.Context getContext()
+    private static java.lang.String toString(java.lang.Object)
+com.tekartik.sqflite.Utils:
+    public void <init>()
+com.tekartik.sqflite.dev.Debug:
+    public void <init>()
+    public static void devLog(java.lang.String,java.lang.String)
+com.tekartik.sqflite.operation.BaseReadOperation:
+    protected abstract com.tekartik.sqflite.operation.OperationResult getOperationResult()
+com.tekartik.sqflite.operation.Operation:
+    public abstract boolean getContinueOnError()
+com.tekartik.sqflite.operation.OperationRunnable
+com.tekartik.sqflite.operation.SqlErrorInfo:
+    public void <init>()
 io.flutter.Build$API_LEVELS
 io.flutter.Build
 io.flutter.BuildConfig
@@ -1778,7 +1887,6 @@ io.flutter.embedding.engine.FlutterEngine:
     public io.flutter.embedding.engine.plugins.contentprovider.ContentProviderControlSurface getContentProviderControlSurface()
     public io.flutter.embedding.engine.systemchannels.DeferredComponentChannel getDeferredComponentChannel()
     public io.flutter.embedding.engine.systemchannels.LocalizationChannel getLocalizationChannel()
-    public io.flutter.embedding.engine.plugins.PluginRegistry getPlugins()
     public io.flutter.embedding.engine.plugins.service.ServiceControlSurface getServiceControlSurface()
     public void removeEngineLifecycleListener(io.flutter.embedding.engine.FlutterEngine$EngineLifecycleListener)
 io.flutter.embedding.engine.FlutterEngineCache:
@@ -1895,7 +2003,6 @@ io.flutter.embedding.engine.dart.DartExecutor$DartCallback
 io.flutter.embedding.engine.dart.DartExecutor$DefaultBinaryMessenger:
     public void disableBufferingIncomingMessages()
     public void enableBufferingIncomingMessages()
-    public io.flutter.plugin.common.BinaryMessenger$TaskQueue makeBackgroundTaskQueue(io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions)
     public void send(java.lang.String,java.nio.ByteBuffer)
 io.flutter.embedding.engine.dart.DartExecutor:
     private static final java.lang.String TAG
@@ -1906,23 +2013,13 @@ io.flutter.embedding.engine.dart.DartExecutor:
     public io.flutter.plugin.common.BinaryMessenger getBinaryMessenger()
     public java.lang.String getIsolateServiceId()
     public int getPendingChannelResponseCount()
-    public io.flutter.plugin.common.BinaryMessenger$TaskQueue makeBackgroundTaskQueue(io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions)
     public void send(java.lang.String,java.nio.ByteBuffer)
     public void setIsolateServiceIdListener(io.flutter.embedding.engine.dart.DartExecutor$IsolateServiceIdListener)
-io.flutter.embedding.engine.dart.DartMessenger$1
-io.flutter.embedding.engine.dart.DartMessenger$ConcurrentTaskQueue
-io.flutter.embedding.engine.dart.DartMessenger$DefaultTaskQueueFactory:
-    public io.flutter.embedding.engine.dart.DartMessenger$DartMessengerTaskQueue makeBackgroundTaskQueue(io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions)
-io.flutter.embedding.engine.dart.DartMessenger$SerialTaskQueue
-io.flutter.embedding.engine.dart.DartMessenger$TaskQueueFactory:
-    public abstract io.flutter.embedding.engine.dart.DartMessenger$DartMessengerTaskQueue makeBackgroundTaskQueue(io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions)
-io.flutter.embedding.engine.dart.DartMessenger$TaskQueueToken
 io.flutter.embedding.engine.dart.DartMessenger:
     private static final java.lang.String TAG
     public void disableBufferingIncomingMessages()
     public void enableBufferingIncomingMessages()
     public int getPendingChannelResponseCount()
-    public io.flutter.plugin.common.BinaryMessenger$TaskQueue makeBackgroundTaskQueue(io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions)
     public void send(java.lang.String,java.nio.ByteBuffer)
 io.flutter.embedding.engine.deferredcomponents.DeferredComponentManager:
     public abstract void loadAssets(int,java.lang.String)
@@ -2006,14 +2103,18 @@ io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterAssets:
     public abstract java.lang.String getAssetFilePathBySubpath(java.lang.String)
     public abstract java.lang.String getAssetFilePathBySubpath(java.lang.String,java.lang.String)
 io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding:
-    public android.content.Context getApplicationContext()
-    public io.flutter.plugin.common.BinaryMessenger getBinaryMessenger()
     public io.flutter.embedding.engine.FlutterEngineGroup getEngineGroup()
     public io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterAssets getFlutterAssets()
     public io.flutter.embedding.engine.FlutterEngine getFlutterEngine()
     public io.flutter.plugin.platform.PlatformViewRegistry getPlatformViewRegistry()
     public io.flutter.view.TextureRegistry getTextureRegistry()
-io.flutter.embedding.engine.plugins.PluginRegistry
+io.flutter.embedding.engine.plugins.PluginRegistry:
+    public abstract void add(java.util.Set)
+    public abstract io.flutter.embedding.engine.plugins.FlutterPlugin get(java.lang.Class)
+    public abstract boolean has(java.lang.Class)
+    public abstract void remove(java.lang.Class)
+    public abstract void remove(java.util.Set)
+    public abstract void removeAll()
 io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding:
     public abstract void addOnNewIntentListener(io.flutter.plugin.common.PluginRegistry$NewIntentListener)
     public abstract void addOnSaveStateListener(io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding$OnSaveInstanceStateListener)
@@ -2120,14 +2221,11 @@ io.flutter.plugin.common.BasicMessageChannel:
     public static void setWarnsOnChannelOverflow(io.flutter.plugin.common.BinaryMessenger,java.lang.String,boolean)
     public void setWarnsOnChannelOverflow(boolean)
 io.flutter.plugin.common.BinaryCodec
-io.flutter.plugin.common.BinaryMessenger$-CC:
-    public static io.flutter.plugin.common.BinaryMessenger$TaskQueue $default$makeBackgroundTaskQueue(io.flutter.plugin.common.BinaryMessenger)
-io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions
+io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions:
+    public io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions setIsSerial(boolean)
 io.flutter.plugin.common.BinaryMessenger:
     public void disableBufferingIncomingMessages()
     public void enableBufferingIncomingMessages()
-    public io.flutter.plugin.common.BinaryMessenger$TaskQueue makeBackgroundTaskQueue()
-    public io.flutter.plugin.common.BinaryMessenger$TaskQueue makeBackgroundTaskQueue(io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions)
     public abstract void send(java.lang.String,java.nio.ByteBuffer)
 io.flutter.plugin.common.ErrorLogResult
 io.flutter.plugin.common.EventChannel$1
@@ -2141,9 +2239,6 @@ io.flutter.plugin.common.FlutterException:
 io.flutter.plugin.common.JSONUtil:
     private void <init>()
     public static java.lang.Object unwrap(java.lang.Object)
-io.flutter.plugin.common.MethodCall:
-    public java.lang.Object argument(java.lang.String)
-    public boolean hasArgument(java.lang.String)
 io.flutter.plugin.common.MethodChannel:
     private static final java.lang.String TAG
     public void <init>(io.flutter.plugin.common.BinaryMessenger,java.lang.String)
@@ -2243,6 +2338,25 @@ io.flutter.plugin.platform.VirtualDisplayController:
 io.flutter.plugin.text.ProcessTextPlugin:
     private static final java.lang.String TAG
     public void destroy()
+io.flutter.plugins.pathprovider.BuildConfig
+io.flutter.plugins.pathprovider.Messages$FlutterError:
+    public void <init>(java.lang.String,java.lang.String,java.lang.Object)
+io.flutter.plugins.pathprovider.Messages:
+    public void <init>()
+io.flutter.plugins.pathprovider.PathProviderPlugin:
+    static final java.lang.String TAG
+io.flutter.plugins.pathprovider.R$attr
+io.flutter.plugins.pathprovider.R$color
+io.flutter.plugins.pathprovider.R$dimen
+io.flutter.plugins.pathprovider.R$drawable
+io.flutter.plugins.pathprovider.R$id
+io.flutter.plugins.pathprovider.R$integer
+io.flutter.plugins.pathprovider.R$layout
+io.flutter.plugins.pathprovider.R$string
+io.flutter.plugins.pathprovider.R$style
+io.flutter.plugins.pathprovider.R$styleable
+io.flutter.plugins.pathprovider.R
+io.flutter.plugins.pathprovider.StorageDirectoryMapper
 io.flutter.util.HandlerCompat:
     public void <init>()
 io.flutter.util.PathUtils:
@@ -8631,6 +8745,8 @@ androidx.savedstate.SavedStateRegistry$AutoRecreated
 androidx.savedstate.SavedStateRegistry:
     boolean mAllowingSavingState
     public android.os.Bundle consumeRestoredStateForKey(java.lang.String)
+com.tekartik.sqflite.Utils:
+    static java.util.Locale localeForLanguageTagPre21(java.lang.String)
 io.flutter.Log:
     public static int ASSERT
     public static int DEBUG
@@ -8651,7 +8767,9 @@ io.flutter.embedding.engine.loader.ResourceExtractor:
 io.flutter.embedding.engine.systemchannels.PlatformChannel$PlatformMessageHandler$-CC
 io.flutter.embedding.engine.systemchannels.SettingsChannel:
     static final synthetic boolean $assertionsDisabled
-io.flutter.plugin.common.BinaryMessenger$-CC
+io.flutter.plugin.common.BinaryMessenger$-CC:
+    public static io.flutter.plugin.common.BinaryMessenger$TaskQueue $default$makeBackgroundTaskQueue(io.flutter.plugin.common.BinaryMessenger,io.flutter.plugin.common.BinaryMessenger$TaskQueueOptions)
+    public static void $default$setMessageHandler(io.flutter.plugin.common.BinaryMessenger,java.lang.String,io.flutter.plugin.common.BinaryMessenger$BinaryMessageHandler,io.flutter.plugin.common.BinaryMessenger$TaskQueue)
 io.flutter.plugin.platform.PlatformPlugin$PlatformPluginDelegate$-CC
 io.flutter.plugin.platform.PlatformView$-CC
 io.flutter.plugin.platform.VirtualDisplayController:

@@ -3,21 +3,30 @@ import 'package:flutter_svg/svg.dart';
 
 import 'package:malltiverse/constants/constants.dart';
 import 'package:malltiverse/constants/svgIcons.dart';
-import 'package:malltiverse/screens/checkout_screen.dart';
-import 'package:malltiverse/utils/cartItems.dart';
-import 'package:malltiverse/utils/separator.dart';
+import 'package:malltiverse/providers/cart_provider.dart';
+import 'package:malltiverse/widgets/cart_summary.dart';
 import 'package:provider/provider.dart';
 
-class CartScreen extends StatelessWidget {
+class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final TextEditingController controller = TextEditingController();
-    final cart = Provider.of<CartItems>(context);
+  State<CartScreen> createState() => _CartScreenState();
+}
 
+class _CartScreenState extends State<CartScreen> {
+  @override
+  Widget build(BuildContext context) {
+    //final TextEditingController controller = TextEditingController();
+    final cart = Provider.of<CartProvider>(context);
+    const int deliveryFee = 1500;
+    const int discountAmont = 3500;
     return cart.items.isEmpty
-        ? const Center(child: Text('No item in Cart'))
+        ? const Center(
+            child: Text(
+            'No item in Cart',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+          ))
         : SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.all(10.0),
@@ -25,7 +34,7 @@ class CartScreen extends StatelessWidget {
                 children: [
                   ConstrainedBox(
                     constraints: BoxConstraints(
-                        maxHeight: Constants.deviceHeight(context) * 0.35),
+                        maxHeight: Constants.deviceHeight(context) * 0.38),
                     child: ListView.builder(
                       itemCount: cart.items.length,
                       itemBuilder: (context, index) {
@@ -96,134 +105,29 @@ class CartScreen extends StatelessWidget {
                                         },
                                       ),
                                       const Spacer(),
-                                      Text('Total: N $totalPrice',
+                                      Text('Total: ₦ $totalPrice',
                                           style: const TextStyle(
                                               fontSize: 14,
                                               fontWeight: FontWeight.w600)),
+
                                     ],
-                                  )
+                                  ),
+                                  
                                 ],
                               ),
+
                             ),
                           ),
                         );
                       },
                     ),
                   ),
-                  const SizedBox(
-                    height: 30,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10.0, right: 10.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(4),
-                        color: const Color.fromRGBO(237, 237, 237, 1),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: SizedBox(
-                          height: Constants.deviceHeight(context) * 0.4,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text(
-                                "Shopping Summary",
-                                style: TextStyle(
-                                    fontSize: 16, fontWeight: FontWeight.w600),
-                              ),
-                              const Text(
-                                'Discount Code',
-                                style: TextStyle(fontSize: 14),
-                              ),
-                              Row(
-                                children: [
-                                  // TextFormField(),
-                                  Flexible(
-                                    child: Form(
-                                      child: TextFormField(
-                                        controller: controller,
-                                        decoration: InputDecoration(
-                                          contentPadding: const EdgeInsets.all(8),
-                                          labelText: 'Discount',
-                                          border: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(9)),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    width: 8,
-                                  ),
-                                  ElevatedButton(
-                                    onPressed: () {},
-                                    style: ElevatedButton.styleFrom(
-                                        backgroundColor: primary),
-                                    child: const Text("Apply"),
-                                  )
-                                ],
-                              ),
-                              const Row(
-                                children: [
-                                  Text("Sub-Total"),
-                                  Spacer(),
-                                  Text("N 58,500")
-                                ],
-                              ),
-                              const Row(
-                                children: [
-                                  Text("Delivery Fee"),
-                                  Spacer(),
-                                  Text("N 1,500")
-                                ],
-                              ),
-                              const Row(
-                                children: [
-                                  Text("Discount Amount"),
-                                  Spacer(),
-                                  Text("N 3,500")
-                                ],
-                              ),
-                              const MySeparator(),
-                              const Row(
-                                children: [
-                                  Text("Total Amount"),
-                                  Spacer(),
-                                  Text("N 62,500")
-                                ],
-                              ),
-                              Center(
-                                child: ElevatedButton(
-                                  onPressed: () {
-                                    Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                CheckoutScreen()));
-                                  },
-                                  style: ElevatedButton.styleFrom(
-                                      backgroundColor: primary),
-                                  child: const Padding(
-                                    padding: EdgeInsets.symmetric(
-                                        horizontal: 17.0),
-                                    child: Text(
-                                      "Checkout",
-                                      style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w700),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
+                 
+                 
+                  CartSummary(
+                    cart: cart,
+                    deliveryFee: deliveryFee,
+                    discountAmount: discountAmont,
                   ),
                 ],
               ),
@@ -231,3 +135,4 @@ class CartScreen extends StatelessWidget {
           );
   }
 }
+

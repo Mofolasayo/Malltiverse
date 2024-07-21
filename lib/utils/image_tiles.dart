@@ -3,7 +3,9 @@ import 'package:flutter_svg/svg.dart';
 import 'package:malltiverse/constants/constants.dart';
 import 'package:malltiverse/constants/svgIcons.dart';
 import 'package:malltiverse/models/item_model.dart';
-import 'package:malltiverse/utils/cartItems.dart';
+import 'package:malltiverse/providers/cart_provider.dart';
+import 'package:malltiverse/providers/favorite_provider.dart';
+import 'package:malltiverse/widgets/add_to_cart_button.dart';
 import 'package:provider/provider.dart';
 
 class ImageTiles extends StatelessWidget {
@@ -17,6 +19,10 @@ class ImageTiles extends StatelessWidget {
   final String price;
   @override
   Widget build(BuildContext context) {
+    final cart = Provider.of<CartProvider>(context);
+    final like = Provider.of<FavoriteProvider>(context);
+
+    final quantity = cart.getItemQuantity(item);
     return Padding(
       padding: const EdgeInsets.only(
         right: 8.0,
@@ -29,17 +35,46 @@ class ImageTiles extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            
             item.photos.isNotEmpty
                 ? Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: const Color.fromRGBO(237, 237, 237, 67),
                     ),
-                    child: Image.network(
-                      imageUrl + item.photos[0].url!,
-                      width: 185,
-                      height: 185,
-                      fit: BoxFit.scaleDown,
+                    child: Stack(
+                      alignment: Alignment.topRight,
+                      children: [
+                        Image.network(
+                          imageUrl + item.photos[0].url!,
+                          width: 185,
+                          height: 185,
+                          fit: BoxFit.scaleDown,
+                        ),
+                        Positioned(
+                          top: 8.0,
+                          right: 8.0,
+                          child: IconButton(
+                            onPressed: () {
+                              if (like.isFavorite(item)) {
+                                Provider.of<FavoriteProvider>(context,
+                                        listen: false)
+                                    .removeLike(item);
+                              } else {
+                                Provider.of<FavoriteProvider>(context,
+                                        listen: false)
+                                    .addLike(item);
+                              }
+                            },
+                            icon: Icon(
+                              color: primary,
+                              like.isFavorite(item)
+                                  ? Icons.favorite
+                                  : Icons.favorite_border_outlined,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   )
                 : const Center(
@@ -55,28 +90,30 @@ class ImageTiles extends StatelessWidget {
             ),
             SvgPicture.string(svgicons.stars),
             Text(
-              "N $price",
+              "₦ $price",
               style: const TextStyle(color: Colors.red),
             ),
-            OutlinedButton(
-              onPressed: () {
-                Provider.of<CartItems>(context, listen: false).addItem(item);
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  content: Text('${item.name} added to cart'),
-                  duration: const Duration(seconds: 1),
-                ));
-              },
-              style: OutlinedButton.styleFrom(
-                  side: const BorderSide(
-                    color: primary,
-                  ),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(14))),
-              child: const Text(
-                'Add to Cart',
-                style: TextStyle(color: Color.fromRGBO(42, 42, 42, 1)),
-              ),
-            )
+            cart.isItemInCart(item)
+                ? Row(
+                    children: [
+                      IconButton(
+                        icon: SvgPicture.string(
+                          svgicons.decrement,
+                        ),
+                        onPressed: () {
+                          cart.decrementItemQuantity(item);
+                        },
+                      ),
+                      Text('$quantity'),
+                      IconButton(
+                        icon: SvgPicture.string(svgicons.increment),
+                        onPressed: () {
+                          cart.incrementItemQuantity(item);
+                        },
+                      ),
+                    ],
+                  )
+                : AddToCartButton(item: item)
           ],
         ),
       ),

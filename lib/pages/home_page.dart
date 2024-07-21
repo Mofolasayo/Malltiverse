@@ -3,19 +3,30 @@ import 'package:flutter_svg/svg.dart';
 import 'package:malltiverse/constants/constants.dart';
 import 'package:malltiverse/constants/svgIcons.dart';
 import 'package:malltiverse/models/product_model.dart';
+import 'package:malltiverse/pages/order_history.dart';
 import 'package:malltiverse/screens/cart_screen.dart';
 import 'package:malltiverse/screens/checkout_screen.dart';
+import 'package:malltiverse/screens/favorite_screen.dart';
 import 'package:malltiverse/screens/home_screen.dart';
 import 'package:malltiverse/services/product_service.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
-
+  static void navigateToTab(BuildContext contex, int index) {
+    final state = contex.findAncestorStateOfType<_HomePageState>();
+    state?.updateIndex(index);
+  }
+  
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+  void updateIndex(int index) {
+    setState(() {
+      currentIndex = index;
+    });
+  }
   int currentIndex = 0;
   final List<Product> cartItems = [];
 
@@ -36,20 +47,18 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final List<Widget> items = [
       HomeScreen(futureProduct: futureProduct),
+      const FavoriteScreen(),
       const CartScreen(),
       const CheckoutScreen()
     ];
 
-    onTappedBar(int index) {
-      setState(() {
-        currentIndex = index;
-      });
-    }
 
     String getTitle(int currentIndex) {
       if (currentIndex == 0) {
         return 'Product List';
       } else if (currentIndex == 1) {
+        return 'Wishlist';
+      } else if (currentIndex == 2) {
         return 'My Cart';
       } else {
         return 'CheckOut';
@@ -57,9 +66,7 @@ class _HomePageState extends State<HomePage> {
     }
 
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
         leading: Padding(
           padding: const EdgeInsets.only(left: 22.0, right: 15),
           child: Image.asset('assets/images/Malltiverse Logo.png'),
@@ -73,6 +80,14 @@ class _HomePageState extends State<HomePage> {
               fontWeight: FontWeight.w600,
               fontSize: 19),
         ),
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const OrderHistory()));
+              },
+              icon: const Icon(Icons.history))
+        ],
       ),
       body: items[currentIndex],
       bottomNavigationBar: Padding(
@@ -81,10 +96,17 @@ class _HomePageState extends State<HomePage> {
         child: ClipRRect(
           borderRadius: BorderRadius.circular(20),
           child: BottomNavigationBar(
+            iconSize: 24,
+
+            type: BottomNavigationBarType.fixed,
             backgroundColor: const Color.fromRGBO(42, 42, 42, 1),
             // selectedItemColor: primary,
             currentIndex: currentIndex,
-            onTap: onTappedBar,
+            onTap: (index) {
+              setState(() {
+                currentIndex = index;
+              });
+            },
             items: [
               BottomNavigationBarItem(
                   icon: currentIndex == 0
@@ -92,9 +114,17 @@ class _HomePageState extends State<HomePage> {
                       : SvgPicture.string(svgicons.home),
                   label: ''),
               BottomNavigationBarItem(
-                  icon: SvgPicture.string(svgicons.cart), label: ''),
+                  icon: currentIndex == 1
+                      ? SvgPicture.string(svgicons.favorite2)
+                      : SvgPicture.string(svgicons.favorite),
+                  label: ''),
               BottomNavigationBarItem(
                   icon: currentIndex == 2
+                      ? SvgPicture.string(svgicons.cart2)
+                      : SvgPicture.string(svgicons.cart),
+                  label: ''),
+              BottomNavigationBarItem(
+                  icon: currentIndex == 3
                       ? SvgPicture.string(svgicons.checkout2)
                       : SvgPicture.string(svgicons.checkout),
                   label: ''),

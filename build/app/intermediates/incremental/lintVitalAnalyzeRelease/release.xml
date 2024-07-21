@@ -4,9 +4,9 @@
     minSdkVersion="21"
     targetSdkVersion="34"
     shrinking="true"
-    mergedManifest="/Users/mofolasayoosikoya/Malltiverse/malltiverse/build/app/intermediates/merged_manifest/release/AndroidManifest.xml"
-    proguardFiles="/Users/mofolasayoosikoya/Malltiverse/malltiverse/build/app/intermediates/default_proguard_files/global/proguard-android.txt-7.3.0:/Users/mofolasayoosikoya/dev/flutter/packages/flutter_tools/gradle/flutter_proguard_rules.pro:proguard-rules.pro"
-    partialResultsDir="/Users/mofolasayoosikoya/Malltiverse/malltiverse/build/app/intermediates/lint_vital_partial_results/release/out"
+    mergedManifest="/Users/mofolasayoosikoya/Malltiverse/build/app/intermediates/merged_manifest/release/AndroidManifest.xml"
+    proguardFiles="/Users/mofolasayoosikoya/Malltiverse/build/app/intermediates/default_proguard_files/global/proguard-android.txt-7.3.0:/Users/mofolasayoosikoya/dev/flutter/packages/flutter_tools/gradle/flutter_proguard_rules.pro:proguard-rules.pro"
+    partialResultsDir="/Users/mofolasayoosikoya/Malltiverse/build/app/intermediates/lint_vital_partial_results/release/out"
     desugaredMethodsFiles="/Users/mofolasayoosikoya/.gradle/caches/transforms-3/d9571a877bfab240140dd1ec74f193c7/transformed/D8BackportedDesugaredMethods.txt">
   <buildFeatures
       namespacing="REQUIRED"/>
@@ -32,9 +32,9 @@
         value="android.app.Application" />
   </manifestPlaceholders>
   <mainArtifact
-      classOutputs="/Users/mofolasayoosikoya/Malltiverse/malltiverse/build/app/intermediates/javac/release/classes:/Users/mofolasayoosikoya/Malltiverse/malltiverse/build/app/tmp/kotlin-classes/release:/Users/mofolasayoosikoya/Malltiverse/malltiverse/build/app/kotlinToolingMetadata:/Users/mofolasayoosikoya/Malltiverse/malltiverse/build/app/intermediates/compile_and_runtime_not_namespaced_r_class_jar/release/R.jar"
+      classOutputs="/Users/mofolasayoosikoya/Malltiverse/build/app/intermediates/javac/release/classes:/Users/mofolasayoosikoya/Malltiverse/build/app/tmp/kotlin-classes/release:/Users/mofolasayoosikoya/Malltiverse/build/app/kotlinToolingMetadata:/Users/mofolasayoosikoya/Malltiverse/build/app/intermediates/compile_and_runtime_not_namespaced_r_class_jar/release/R.jar"
       applicationId="com.example.malltiverse"
-      generatedSourceFolders="/Users/mofolasayoosikoya/Malltiverse/malltiverse/build/app/generated/ap_generated_sources/release/out:/Users/mofolasayoosikoya/Malltiverse/malltiverse/build/app/generated/aidl_source_output_dir/release/out:/Users/mofolasayoosikoya/Malltiverse/malltiverse/build/app/generated/source/buildConfig/release:/Users/mofolasayoosikoya/Malltiverse/malltiverse/build/app/generated/renderscript_source_output_dir/release/out"
-      generatedResourceFolders="/Users/mofolasayoosikoya/Malltiverse/malltiverse/build/app/generated/res/rs/release:/Users/mofolasayoosikoya/Malltiverse/malltiverse/build/app/generated/res/resValues/release">
+      generatedSourceFolders="/Users/mofolasayoosikoya/Malltiverse/build/app/generated/ap_generated_sources/release/out:/Users/mofolasayoosikoya/Malltiverse/build/app/generated/aidl_source_output_dir/release/out:/Users/mofolasayoosikoya/Malltiverse/build/app/generated/source/buildConfig/release:/Users/mofolasayoosikoya/Malltiverse/build/app/generated/renderscript_source_output_dir/release/out"
+      generatedResourceFolders="/Users/mofolasayoosikoya/Malltiverse/build/app/generated/res/rs/release:/Users/mofolasayoosikoya/Malltiverse/build/app/generated/res/resValues/release">
   </mainArtifact>
 </variant>

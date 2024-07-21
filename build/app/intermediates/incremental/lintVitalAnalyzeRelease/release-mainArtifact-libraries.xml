@@ -1,8 +1,34 @@
 <libraries>
   <library
-      name="__local_aars__:/Users/mofolasayoosikoya/Malltiverse/malltiverse/build/app/intermediates/flutter/release/libs.jar:unspecified@jar"
-      jars="/Users/mofolasayoosikoya/Malltiverse/malltiverse/build/app/intermediates/flutter/release/libs.jar"
-      resolved="__local_aars__:/Users/mofolasayoosikoya/Malltiverse/malltiverse/build/app/intermediates/flutter/release/libs.jar:unspecified"/>
+      name="__local_aars__:/Users/mofolasayoosikoya/Malltiverse/build/app/intermediates/flutter/release/libs.jar:unspecified@jar"
+      jars="/Users/mofolasayoosikoya/Malltiverse/build/app/intermediates/flutter/release/libs.jar"
+      resolved="__local_aars__:/Users/mofolasayoosikoya/Malltiverse/build/app/intermediates/flutter/release/libs.jar:unspecified"/>
+  <library
+      name="/Users/mofolasayoosikoya/Malltiverse/android@@:path_provider_android::release"
+      jars="/Users/mofolasayoosikoya/Malltiverse/build/path_provider_android/.transforms/03d8f2bddf9aa6e4aa249f9a0e48c1be/transformed/out/jars/classes.jar:/Users/mofolasayoosikoya/Malltiverse/build/path_provider_android/.transforms/03d8f2bddf9aa6e4aa249f9a0e48c1be/transformed/out/jars/libs/R.jar"
+      resolved="io.flutter.plugins.pathprovider:path_provider_android:unspecified"
+      folder="/Users/mofolasayoosikoya/Malltiverse/build/path_provider_android/.transforms/03d8f2bddf9aa6e4aa249f9a0e48c1be/transformed/out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="/Users/mofolasayoosikoya/Malltiverse/android@@:sqflite::release"
+      jars="/Users/mofolasayoosikoya/Malltiverse/build/sqflite/.transforms/3d869c9fa9d3efd414104c3da87c2907/transformed/out/jars/classes.jar:/Users/mofolasayoosikoya/Malltiverse/build/sqflite/.transforms/3d869c9fa9d3efd414104c3da87c2907/transformed/out/jars/libs/R.jar"
+      resolved="com.tekartik.sqflite:sqflite:unspecified"
+      folder="/Users/mofolasayoosikoya/Malltiverse/build/sqflite/.transforms/3d869c9fa9d3efd414104c3da87c2907/transformed/out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
   <library
       name="io.flutter:flutter_embedding_release:1.0.0-edd8546116457bdf1c5bdfb13ecb9463d2bb5ed4@jar"
       jars="/Users/mofolasayoosikoya/.gradle/caches/modules-2/files-2.1/io.flutter/flutter_embedding_release/1.0.0-edd8546116457bdf1c5bdfb13ecb9463d2bb5ed4/a9fdc27004af28867fae3e3f6a954f860a8f1fbe/flutter_embedding_release-1.0.0-edd8546116457bdf1c5bdfb13ecb9463d2bb5ed4.jar"
@@ -57,22 +83,6 @@
       name="io.flutter:x86_64_release:1.0.0-edd8546116457bdf1c5bdfb13ecb9463d2bb5ed4@jar"
       jars="/Users/mofolasayoosikoya/.gradle/caches/modules-2/files-2.1/io.flutter/x86_64_release/1.0.0-edd8546116457bdf1c5bdfb13ecb9463d2bb5ed4/a7307813a8dd5ca27197392e0278c9743977628f/x86_64_release-1.0.0-edd8546116457bdf1c5bdfb13ecb9463d2bb5ed4.jar"
       resolved="io.flutter:x86_64_release:1.0.0-edd8546116457bdf1c5bdfb13ecb9463d2bb5ed4"/>
-  <library
-      name="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10@jar"
-      jars="/Users/mofolasayoosikoya/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.7.10/1ef73fee66f45d52c67e2aca12fd945dbe0659bf/kotlin-stdlib-jdk7-1.7.10.jar"
-      resolved="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10"/>
-  <library
-      name="org.jetbrains.kotlin:kotlin-stdlib:1.7.10@jar"
-      jars="/Users/mofolasayoosikoya/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.7.10/d2abf9e77736acc4450dc4a3f707fa2c10f5099d/kotlin-stdlib-1.7.10.jar"
-      resolved="org.jetbrains.kotlin:kotlin-stdlib:1.7.10"/>
-  <library
-      name="org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10@jar"
-      jars="/Users/mofolasayoosikoya/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.7.10/bac80c520d0a9e3f3673bc2658c6ed02ef45a76a/kotlin-stdlib-common-1.7.10.jar"
-      resolved="org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10"/>
-  <library
-      name="org.jetbrains:annotations:13.0@jar"
-      jars="/Users/mofolasayoosikoya/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar"
-      resolved="org.jetbrains:annotations:13.0"/>
   <library
       name="androidx.lifecycle:lifecycle-common-java8:2.2.0@jar"
       jars="/Users/mofolasayoosikoya/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common-java8/2.2.0/cd3478503da69b1a7e0319bd2d1389943db9b364/lifecycle-common-java8-2.2.0.jar"
@@ -259,9 +269,25 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="androidx.annotation:annotation:1.2.0@jar"
-      jars="/Users/mofolasayoosikoya/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.2.0/57136ff68ee784c6e19db34ed4a175338fadfde1/annotation-1.2.0.jar"
-      resolved="androidx.annotation:annotation:1.2.0"/>
+      name="androidx.annotation:annotation-jvm:1.8.0@jar"
+      jars="/Users/mofolasayoosikoya/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation-jvm/1.8.0/b8a16fe526014b7941c1debaccaf9c5153692dbb/annotation-jvm-1.8.0.jar"
+      resolved="androidx.annotation:annotation-jvm:1.8.0"/>
+  <library
+      name="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10@jar"
+      jars="/Users/mofolasayoosikoya/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.7.10/1ef73fee66f45d52c67e2aca12fd945dbe0659bf/kotlin-stdlib-jdk7-1.7.10.jar"
+      resolved="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10"/>
+  <library
+      name="org.jetbrains.kotlin:kotlin-stdlib:1.7.10@jar"
+      jars="/Users/mofolasayoosikoya/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.7.10/d2abf9e77736acc4450dc4a3f707fa2c10f5099d/kotlin-stdlib-1.7.10.jar"
+      resolved="org.jetbrains.kotlin:kotlin-stdlib:1.7.10"/>
+  <library
+      name="org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10@jar"
+      jars="/Users/mofolasayoosikoya/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.7.10/bac80c520d0a9e3f3673bc2658c6ed02ef45a76a/kotlin-stdlib-common-1.7.10.jar"
+      resolved="org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10"/>
+  <library
+      name="org.jetbrains:annotations:13.0@jar"
+      jars="/Users/mofolasayoosikoya/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar"
+      resolved="org.jetbrains:annotations:13.0"/>
   <library
       name="androidx.annotation:annotation-experimental:1.1.0@aar"
       jars="/Users/mofolasayoosikoya/.gradle/caches/transforms-3/3d2f03fc996c2e0aa3dee5cfa3002cd1/transformed/jetified-annotation-experimental-1.1.0/jars/classes.jar"

@@ -10,3 +10,5 @@ com.example.malltiverse.app-rs-8 /Users/mofolasayoosikoya/Malltiverse/build/app/
 com.example.malltiverse.app-mergeDebugResources-9 /Users/mofolasayoosikoya/Malltiverse/build/app/intermediates/incremental/debug/mergeDebugResources/merged.dir
 com.example.malltiverse.app-mergeDebugResources-10 /Users/mofolasayoosikoya/Malltiverse/build/app/intermediates/incremental/debug/mergeDebugResources/stripped.dir
 com.example.malltiverse.app-merged_res-11 /Users/mofolasayoosikoya/Malltiverse/build/app/intermediates/merged_res/debug
+com.example.malltiverse.app-packaged_res-12 /Users/mofolasayoosikoya/Malltiverse/build/path_provider_android/intermediates/packaged_res/debug
+com.example.malltiverse.app-packaged_res-13 /Users/mofolasayoosikoya/Malltiverse/build/sqflite/intermediates/packaged_res/debug
